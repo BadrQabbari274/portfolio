@@ -43,8 +43,18 @@ const DATA = {
         'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766957262/WhatsApp_Image_2025-12-23_at_8.41.44_PM_xzyagb.jpg',
         'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766957260/WhatsApp_Image_2025-12-23_at_8.41.41_PM_depnfc.jpg',
         'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766957257/WhatsApp_Image_2025-12-23_at_8.41.33_PM_kjfmtm.jpg',
-        'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766957257/WhatsApp_Image_2025-12-23_at_8.41.33_PM_kjfmtm.jpg',
-        'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766957917/WhatsApp_Image_2025-11-18_at_9.44.15_PM_thrlxk.jpg'
+        'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766957917/WhatsApp_Image_2025-11-18_at_9.44.15_PM_thrlxk.jpg',
+        'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766959067/WhatsApp_Image_2025-12-23_at_8.41.43_PM_qdw10k.jpg',
+        'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1767033558/IMG-20250808-WA0048_viejwj.jpg',
+        'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1767033558/IMG-20250808-WA0030_fy0ly5.jpg',
+        'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1767033557/IMG-20250809-WA0003_dd462q.jpg',
+        'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766957261/WhatsApp_Image_2025-12-28_23-00-11_ap8l2m.jpg',
+        'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1767037323/IMG-20250719-WA0016_cvcmfj.jpg',
+        'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1767037316/IMG-20250719-WA0013_uoqlsw.jpg',
+        'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1767037315/20250812_100856_zgphkg.jpg',
+        'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1767037889/20250726_123739_vz4ck1.jpg',
+        'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1767037890/20251224_130439_pbdbec.jpg'
+        
       ] 
     }
   ],
@@ -116,11 +126,11 @@ const DATA = {
     { name: 'Human Resources Training', org: 'Bright Bridge Center', images: ['https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766870110/HR_h0tk69.jpg'] },
     { name: 'English International Certificate', org: 'Bright Bridge Center', images: ['https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/a_-90/English_wckfmd.jpg'] },
     { name: 'Effective Leadership', org: 'HP LIFE', images: ['https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766870114/Screenshot_2024-03-09_102254_tuespo.png'] },
-    { name: 'Business Communications', org: 'Great Learning', images: ['https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766870114/Screenshot_2024-03-09_102254_tuespo.png'] },
+    { name: 'Business Communications', org: 'HP LIFE', images: ['https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766870114/Screenshot_2024-03-09_102254_tuespo.png'] },
     { name: 'Get Started with Figma', org: 'Coursera', images: ['https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766870113/Get_started_with_figma_w6wmxl.png'] }
   ],
   competitions: [
-    { name: 'Egyptian Collegiate Programming Contest (ECPC)', year: '2025', images: ['https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766959067/WhatsApp_Image_2025-12-23_at_8.41.43_PM_qdw10k.jpg'] },
+    { name: 'Egyptian Collegiate Programming Contest (ECPC)', year: '2025', images: ['https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1767035830/WhatsApp_Image_2025-12-29_at_9.16.28_PM_xweiqz.jpg','https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1767035830/WhatsApp_Image_2025-12-29_at_9.15.26_PM_booa7i.jpg','https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1767035830/WhatsApp_Image_2025-12-29_at_9.16.02_PM_c8qzpc.jpg'] },
     { name: 'International Science and Engineering Fair (ISEF)', year: '2023', images: [] }
   ],
   artworks: [
