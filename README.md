@@ -33,3 +33,27 @@ Built with modern frontend technologies and optimized for performance and deploy
 
 ## 📂 Project Structure
 
+portfolio/
+├── public/
+│ └── CV.pdf
+├── src/
+│ ├── assets/
+│ ├── App.jsx
+│ ├── App.css
+│ ├── index.css
+│ └── main.jsx
+├── index.html
+├── tailwind.config.js
+├── postcss.config.js
+├── vite.config.js
+└── package.json
+
+---
+
+## ⚙️ Installation & Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/BadrQabbari274/portfolio.git
+cd portfolio
