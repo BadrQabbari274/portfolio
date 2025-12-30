@@ -155,7 +155,7 @@ const DATA = {
     { url: 'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto//v1766959561/WhatsApp_Image_2025-12-29_00-05-48_etmlsn.jpg' },
     { url: 'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto//v1766959563/WhatsApp_Image_2025-12-29_at_12.05.02_AM_fm6gud.jpg' }
   ],
-  cv: { pdfUrl: 'https://drive.google.com/file/d/1y7M8p_rO1gAdJV2kply9urhD5ykJ41CU/view?usp=sharing' }
+  cv: { pdfUrl: 'https://drive.google.com/file/d/1eUnU_vU0IvHTnaQc86SOlHkiwnHuAxHp/view?usp=sharing' }
 };
 
 function ModalGallery({ images, onClose }) {
