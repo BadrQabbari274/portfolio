@@ -211,33 +211,34 @@ export default function Portfolio() {
       </div>
 
       {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-40 transition-all duration-500 ${scrolled ? 'bg-[#0a0a0a]/80 backdrop-blur-lg border-b border-white/5 py-3' : 'py-6'}`}>
-        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
-          
-          {/* Logo */}
-          <div
-            className="text-2xl font-black tracking-tighter bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent cursor-pointer"
-            onClick={() => window.scrollTo(0, 0)}
-          >
-            BADR<span className="font-light text-white/50">.DEV</span>
-          </div>
+<nav className={`fixed top-0 w-full z-40 transition-all duration-500 ${scrolled ? 'bg-[#0a0a0a]/80 backdrop-blur-lg border-b border-white/5 py-3' : 'py-6'}`}>
+  <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+    
+    {/* Logo */}
+    <div
+      className="text-2xl font-black tracking-tighter bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent cursor-pointer"
+      onClick={() => window.scrollTo(0, 0)}
+    >
+      BADR<span className="font-light text-white/50">.DEV</span>
+    </div>
 
-          {/* Navigation Links */}
-          <div className="w-full md:w-auto overflow-x-auto scrollbar-hide">
-            <div className="flex flex-nowrap justify-start md:justify-center gap-3 px-1">
-              <NavLink to="#home" label="Home" />
-              <NavLink to="#about" label="About" />
-              <NavLink to="#skills" label="Skills" />
-              <NavLink to="#journey" label="Education & Exp" />
-              <NavLink to="#projects" label="Projects" />
-              <NavLink to="#certificates" label="Certificates" />
-              <NavLink to="#art" label="Gallery" />
-              <NavLink to="#contact" label="Contact" />
-            </div>
-          </div>
+    {/* Navigation Links */}
+    <div className="flex w-full overflow-x-auto scrollbar-hide">
+      <div className="flex flex-nowrap justify-start md:justify-center gap-4 min-w-max">
+        <NavLink to="#home" label="Home" />
+        <NavLink to="#about" label="About" />
+        <NavLink to="#skills" label="Skills" />
+        <NavLink to="#journey" label="Education & Exp" />
+        <NavLink to="#projects" label="Projects" />
+        <NavLink to="#certificates" label="Certificates" />
+        <NavLink to="#art" label="Gallery" />
+        <NavLink to="#contact" label="Contact" />
+      </div>
+    </div>
 
-        </div>
-      </nav>
+  </div>
+</nav>
+
 
 
       {/* Hero Section */}
