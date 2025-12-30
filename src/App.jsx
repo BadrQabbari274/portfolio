@@ -19,7 +19,7 @@ const DATA = {
   header: { 
     name: 'Badr Eldin Qabbari', 
     title: 'Software Engineer', 
-    subtitle: 'Full-Stack Developer | ASP.NET • Flutter • SQL Server', 
+    subtitle: 'Full-Stack Developer | ASP.NET • Flutter  • SQL Server', 
     location: 'Alexandria, Egypt', 
     email: 'badreldinahmedqabbari@gmail.com', 
     phone: '+20 128 494 0906', 
@@ -37,7 +37,7 @@ const DATA = {
         'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766957266/%D8%B5%D9%88%D8%B1%D8%A9_%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8_%D8%A8%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE_2023-10-21_%D9%81%D9%8A_16.38.30_232d7808_zisxqm.jpg',
         'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766957266/WhatsApp_Image_2023-11-30_at_22.14.54_4617d7f7_djyhfm.jpg',
         'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766957264/WhatsApp_Image_2023-11-30_at_20.50.14_5cc74110_uiyhji.jpg',
-        'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766957264/WhatsApp_Image_2023-12-10_at_01.48.06_b2ed642c_fdsyzr.jpg',
+        'https://res.cloudinary.com/dmheu8ano/image/upload/c_crop,g_north_west,h_621,w_539,x_181/WhatsApp_Image_2023-12-10_at_01.48.06_b2ed642c_fdsyzr.jpg',
         'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766957262/402033733_684943557064149_1718479183318703315_n_xlwyti.jpg',
         'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766957262/WhatsApp_Image_2025-12-28_22-59-27_qq6yhs.jpg',
         'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766957262/WhatsApp_Image_2025-12-23_at_8.41.44_PM_xzyagb.jpg',
@@ -264,12 +264,17 @@ export default function Portfolio() {
                   </div>
                 </div>
               </div>
+              
               <div className="order-1 md:order-2 flex justify-center perspective-1000">
                 <div className="relative w-72 h-72 md:w-96 md:h-96 group-hover:rotate-y-12 transition-transform duration-700 ease-out">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl rotate-6 opacity-50 blur-lg"/>
-                  <img src={DATA.header.profileImage} alt="Profile" className="relative w-full h-full object-cover rounded-2xl shadow-2xl border-2 border-white/10 grayscale group-hover:grayscale-0 transition-all duration-500"/>
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl rotate-6 opacity-50 blur-lg" />
+                  <img
+                    src={DATA.header.profileImage}
+                    alt="Profile"
+                    className="relative w-full h-full object-cover rounded-2xl shadow-2xl border-2 border-white/10"/>
                 </div>
               </div>
+
             </div>
           </div>
         </section>
