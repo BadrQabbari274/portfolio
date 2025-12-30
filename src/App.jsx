@@ -78,9 +78,25 @@ const DATA = {
     duration: '2025 - Present', 
     description: 'An advanced e-commerce ecosystem featuring a high-performance mobile application built with Flutter and a secure RESTful API back-end. The system handles complex operations including secure user authentication (JWT), dynamic product cataloging, shopping cart logic, and real-time order processing.', 
     images: [] 
+    },{
+      id: 'p4',
+      title: "Green Pack",
+      duration: "2025 – 2026",
+      description: "Smart eco-reward mobile application built with Flutter and Firebase Realtime Database. The app is connected to a physical recycling box powered by Arduino and ESP modules. When a customer inserts recyclable items, points are automatically sent to their account in real time, encouraging sustainable behavior through a digital reward system.",
+      tech: [
+        "Flutter",
+        "Firebase Realtime Database",
+        "Arduino",
+        "ESP8266 / ESP32",
+        "IoT"
+      ],
+      images: []
     },
     { id: 'p1', title: 'School Management System', tech: ['MVC.NET Core', 'SQL Server', 'Entity Framework'], duration: '2025', description: 'A comprehensive enterprise web application for educational institutions featuring student registration, attendance tracking, grade management, and role-based security access.', images: [] },
     { id: 'p2', title: 'Gym Management System', tech: ['WPF', 'Entity Framework', 'SQL Server'], duration: '2024', description: 'A high-performance desktop application for fitness centers, managing member subscriptions, trainer schedules, and financial reporting with a modern UI.', images: [] }
+    
+    
+    
     
   ],
   // Merged Timeline Data (Education, Work, Activities)
@@ -197,21 +213,32 @@ export default function Portfolio() {
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-40 transition-all duration-500 ${scrolled ? 'bg-[#0a0a0a]/80 backdrop-blur-lg border-b border-white/5 py-3' : 'py-6'}`}>
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-2xl font-black tracking-tighter bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent cursor-pointer" onClick={() => window.scrollTo(0,0)}>
+          
+          {/* Logo */}
+          <div
+            className="text-2xl font-black tracking-tighter bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent cursor-pointer"
+            onClick={() => window.scrollTo(0, 0)}
+          >
             BADR<span className="font-light text-white/50">.DEV</span>
           </div>
-          <div className="flex flex-wrap justify-center gap-1 md:gap-4">
-            <NavLink to="#home" label="Home" />
-            <NavLink to="#about" label="About" />
-            <NavLink to="#skills" label="Skills" />
-            <NavLink to="#journey" label="Education & Exp" />
-            <NavLink to="#projects" label="Projects" />
-            <NavLink to="#certificates" label="Certificates" />
-            <NavLink to="#art" label="Gallery" />
-            <NavLink to="#contact" label="Contact" />
+
+          {/* Navigation Links */}
+          <div className="w-full md:w-auto overflow-x-auto scrollbar-hide">
+            <div className="flex flex-nowrap justify-start md:justify-center gap-3 px-1">
+              <NavLink to="#home" label="Home" />
+              <NavLink to="#about" label="About" />
+              <NavLink to="#skills" label="Skills" />
+              <NavLink to="#journey" label="Education & Exp" />
+              <NavLink to="#projects" label="Projects" />
+              <NavLink to="#certificates" label="Certificates" />
+              <NavLink to="#art" label="Gallery" />
+              <NavLink to="#contact" label="Contact" />
+            </div>
           </div>
+
         </div>
       </nav>
+
 
       {/* Hero Section */}
       <header id="home" className="relative min-h-screen flex items-center justify-center pt-20">
