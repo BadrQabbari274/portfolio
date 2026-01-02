@@ -33,9 +33,9 @@ const DATA = {
     { 
       title: 'My Activities Gallery', 
       images: [
-      
-        'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766957266/%D8%B5%D9%88%D8%B1%D8%A9_%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8_%D8%A8%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE_2023-10-21_%D9%81%D9%8A_16.38.30_232d7808_zisxqm.jpg',
+
         'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766957266/WhatsApp_Image_2023-11-30_at_22.14.54_4617d7f7_djyhfm.jpg',
+        'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766957266/%D8%B5%D9%88%D8%B1%D8%A9_%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8_%D8%A8%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE_2023-10-21_%D9%81%D9%8A_16.38.30_232d7808_zisxqm.jpg',
         'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766957264/WhatsApp_Image_2023-11-30_at_20.50.14_5cc74110_uiyhji.jpg',
         'https://res.cloudinary.com/dmheu8ano/image/upload/c_crop,g_north_west,h_621,w_539,x_181/WhatsApp_Image_2023-12-10_at_01.48.06_b2ed642c_fdsyzr.jpg',
         'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766957262/402033733_684943557064149_1718479183318703315_n_xlwyti.jpg',
@@ -51,7 +51,6 @@ const DATA = {
         'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1766957261/WhatsApp_Image_2025-12-28_23-00-11_ap8l2m.jpg',
         'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1767037323/IMG-20250719-WA0016_cvcmfj.jpg',
         'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1767037316/IMG-20250719-WA0013_uoqlsw.jpg',
-        'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1767037315/20250812_100856_zgphkg.jpg',
         'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1767037889/20250726_123739_vz4ck1.jpg',
         'https://res.cloudinary.com/dmheu8ano/image/upload/f_auto,q_auto/v1767037890/20251224_130439_pbdbec.jpg'
         
@@ -103,17 +102,17 @@ const DATA = {
   journey: [
     { 
       id: 1, type: 'education', year: '2023 – Present', title: 'Computer Science Major', org: 'Fathalla International Applied Technology School (FIATS)',
-      desc: 'Specializing in Software Engineering. Relevant Coursework: Algorithms, Database Management, Web & Desktop Development (ASP.NET, WPF), Network Basics.',
-      tags: ['GPA 4.0', 'Top of Class']
+      desc: 'Specializing in Software Engineering. Relevant Coursework: Algorithms & Problem Solving, Database Management, Programming (C++, C#, Python, Dart), Web & Desktop Development (ASP.NET MVC, ASP.NET Web API, Entity Framework Core, WPF, MVVM, React.js), Mobile Development (Flutter, Firebase, Cross-Platform Applications).',
+      tags: ['Expected Graduation: 2026']
     },
     { 
       id: 2, type: 'work', year: '2025', title: 'Web Developer – ASP.NET MVC Project', org: 'FIATS School Project',
       desc: 'Participated in full software development lifecycle. Designed database architecture using SQL Server. Developed responsive UI components and core business logic. Delivered scalable code following MVC patterns.',
-      tags: ['ASP.NET', 'MVC', 'SQL']
+      tags: ['ASP.NET', 'MVC', 'SQL',]
     },
     { 
-      id: 3, type: 'activity', year: '2024', title: 'Soft Skills Instructor', org: 'IATS Camp, 6th of October City',
-      desc: 'Led workshops on communication and leadership for diverse student groups.',
+      id: 3, type: 'activity', year: '2024', title: 'Peer Ambassador', org: 'FIATS, USAID',
+      desc: 'Led workshops on communication and leadership for diverse student groupsLed workshops on communication and leadership for diverse student groups.',
       tags: ['Leadership', 'Mentoring']
     },
     { 
@@ -128,7 +127,7 @@ const DATA = {
     },
     { 
       id: 6, type: 'activity', year: '2021 – 2024', title: 'Sea Scout Member', org: 'Alexandria Scout Group - Al-Haramain Youth Center',
-      desc: 'Active member for 3 years. Developed survival skills, teamwork, and community service discipline within the Marine Scouts division.',
+      desc: 'Active member for 3 years. Developed scouting skills, teamwork, and community service discipline within the Marine Scouts division.',
       tags: ['Scouts', 'Teamwork']
     },
     { 
@@ -172,34 +171,25 @@ function ModalGallery({ images, onClose }) {
 }
 
 export default function Portfolio() {
-  // ==========================================
-  // 1. المتغيرات والـ Hooks (تتحط في الأول)
-  // ==========================================
   const [gallery, setGallery] = useState({ open: false, images: [] });
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   
-  // (جديد) ضيف السطر ده هنا مع باقي الـ useState
   const [isVisible, setIsVisible] = useState(true); 
 
-  // ==========================================
-  // 2. الـ useEffect (تعديل دالة السكرول)
-  // ==========================================
   useEffect(() => {
-    let lastScrollY = window.scrollY; // متغير مساعد
+    let lastScrollY = window.scrollY; 
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      // (جديد) اللوجيك بتاع اختفاء الـ Navbar
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsVisible(false); // نازل لتحت -> اخفي
+        setIsVisible(false); // Hiddin 
       } else {
-        setIsVisible(true);  // طالع لفوق -> اظهر
+        setIsVisible(true);  // Show
       }
       lastScrollY = currentScrollY;
 
-      // الكود القديم بتاعك
       setScrolled(currentScrollY > 50);
       
       const sections = ['home', 'about', 'skills', 'projects', 'journey', 'certificates', 'art', 'contact'];
@@ -224,7 +214,7 @@ export default function Portfolio() {
       <span className={`absolute bottom-0 left-0 h-0.5 bg-blue-500 transition-all duration-300 ${activeSection === to.replace('#','') ? 'w-full' : 'w-0 group-hover:w-full'}`}/>
     </a>
   );
-  
+
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-blue-500/30 selection:text-blue-200">
       
