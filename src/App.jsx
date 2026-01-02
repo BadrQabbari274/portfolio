@@ -112,7 +112,7 @@ const DATA = {
     },
     { 
       id: 3, type: 'activity', year: '2024', title: 'Peer Ambassador', org: 'FIATS, USAID',
-      desc: 'Led workshops on communication and leadership for diverse student groupsLed workshops on communication and leadership for diverse student groups.',
+      desc: 'Led workshops on communication, presentation, and leadership for diverse student groups, while supporting event coordination and logistics. Enhanced teamwork, problem-solving, and time management skills through active involvement in a large-scale, high-impact community event.',
       tags: ['Leadership', 'Mentoring']
     },
     { 
