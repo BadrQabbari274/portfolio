@@ -17,9 +17,9 @@ const Icon = {
 // --- DATA ---
 const DATA = {
   header: { 
-    name: 'Badr Eldin Qabbari', 
-    title: 'Software Engineer', 
-    subtitle: 'Full-Stack Developer | ASP.NET • Flutter  • SQL Server', 
+    name: 'Badr Eldin', 
+    title: 'Software Engineer | Full-Stack Developer', 
+    subtitle: 'ASP.NET • Flutter • SQL Server', 
     location: 'Alexandria, Egypt', 
     email: 'badreldinahmedqabbari@gmail.com', 
     phone: '+20 128 494 0906', 
@@ -58,17 +58,82 @@ const DATA = {
     }
   ],
   // Updated "Killer" Summary
-  summary: "A visionary Software Engineer and Full-Stack Developer with an unrelenting drive for innovation. I don't just write code; I architect scalable, high-performance solutions that bridge the gap between complex logic and intuitive user experiences. With deep expertise in the .NET ecosystem and a creative mindset honed through visual arts, I transform abstract concepts into robust, enterprise-grade applications. From algorithms to architecture, I am committed to engineering excellence.",
+  summary: [
+    "I’m Badr Eldin Qabbari — a Full-Stack Software Engineer who builds polished, production-ready applications using .NET and Flutter. I love turning ideas into fast, reliable products that people enjoy using.",
+    "I translate complex requirements into clean architectures — from APIs and databases to responsive interfaces — combining engineering rigor with practical design.",
+    "I lead community workshops, collaborate across teams, and keep learning new tools to ship meaningful software that solves real problems."
+  ],
   skills: {
     technical: [
-      { category: 'Programming Languages', items: ['C++ (Problem Solving & Algorithms)', 'C# (Desktop & Web Applications)', 'Python (Multimedia Processing)', 'SQL (Database Management)'] },
-      { category: 'Web Development', items: ['ASP.NET MVC', 'ASP.NET Web API', 'RESTful API Design', 'Entity Framework Core'] },
-      { category: 'Desktop Development', items: ['Windows Presentation Foundation (WPF)', 'MVVM Architecture', 'Prism Library'] },
-      { category: 'Frameworks & Tools', items: ['Flutter (Cross-Platform)', '.NET Core', 'MS SQL Server', 'Git & DevOps'] },
-      { category: 'Design & Creative', items: ['Figma UI/UX', 'Adobe Photoshop', 'Canva'] },
-      { category: 'IT Infrastructure', items: ['Network Administration', 'Hardware Troubleshooting', 'System Configuration', 'Server Management'] }
+      { 
+        category: 'Programming Languages', 
+        items: [
+          'C++ (Problem Solving & Algorithms)', 
+          'C# (Desktop & Web Applications)', 
+          'Python (Multimedia Processing)', 
+          'Dart (Mobile Application Development)', 
+          'SQL (Database Management)'
+        ] 
+      },
+      { 
+        category: 'Web Development', 
+        items: [
+          'ASP.NET MVC', 
+          'ASP.NET Web API', 
+          'RESTful API Design', 
+          'Entity Framework Core', 
+          'React.js (Frontend Development)', 
+          'HTML5', 
+          'CSS3', 
+          'JavaScript'
+        ] 
+      },
+      { 
+        category: 'Mobile Development', 
+        items: [
+          'Flutter Framework (Cross-Platform)', 
+          'Firebase (Authentication, Firestore, Realtime Database)', 
+          'Cross-Platform Mobile Applications'
+        ] 
+      },
+      { 
+        category: 'Desktop Development', 
+        items: [
+          'Windows Presentation Foundation (WPF)', 
+          'MVVM Architecture', 
+          'Prism Library'
+        ] 
+      },
+      { 
+        category: 'Frameworks & Tools', 
+        items: [
+          '.NET Core', 
+          'MS SQL Server', 
+          'Git & Version Control', 
+          'DevOps'
+        ] 
+      },
+      { 
+        category: 'Design & Creative', 
+        items: [
+          'Figma UI/UX', 
+          'Adobe Photoshop', 
+          'Canva'
+        ] 
+      },
+      { 
+        category: 'IT Infrastructure', 
+        items: [
+          'Network Administration', 
+          'Hardware Troubleshooting', 
+          'System Configuration', 
+          'Server Management', 
+          'Software Testing'
+        ] 
+      }
     ],
-    soft: ['Strategic Leadership', 'Public Speaking', 'Analytical Thinking', 'Team Synergy', 'Adaptability', 'Creative Problem Solving']
+    
+    soft: ['Strategic Leadership', 'Public Speaking', 'Analytical Thinking','Leadership', 'Mentoring', 'Adaptability', 'Problem Solving']
   },
   projects: [{ 
     id: 'p3', 
@@ -262,30 +327,51 @@ export default function Portfolio() {
 
       {/* Hero Section */}
       <header id="home" className="relative min-h-screen flex items-center justify-center pt-20">
-        <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
-          <h1 className="text-6xl md:text-7xl font-black mb-6 tracking-tight leading-tight">
-            <span className="block text-white mb-2">{DATA.header.name}</span>
-            <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient-x">Software Engineer</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed">
-            {DATA.header.subtitle}
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center animate-fade-in-up delay-200">
-            <a href={DATA.cv.pdfUrl} target="_blank" rel="noreferrer" className="group relative px-8 py-4 bg-white text-black rounded-full font-bold hover:scale-105 transition-all duration-300 flex items-center gap-2 overflow-hidden">
-              <span className="relative z-10 flex items-center gap-2"><Icon.Download/> Download CV</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-            </a>
-            <a href="#projects" className="px-8 py-4 bg-white/5 border border-white/10 hover:bg-white/10 rounded-full font-bold backdrop-blur-sm transition-all hover:scale-105 flex items-center gap-2">
-              <Icon.Eye/> Explore Work
-            </a>
-          </div>
-          <div className="mt-12 flex gap-8 justify-center opacity-60 hover:opacity-100 transition-opacity">
-            <a href={DATA.header.github} target="_blank" rel="noreferrer" className="hover:text-blue-400 hover:scale-125 transition-all"><Icon.Github/></a>
-            <a href={DATA.header.linkedin} target="_blank" rel="noreferrer" className="hover:text-blue-400 hover:scale-125 transition-all"><Icon.Linkedin/></a>
-            <a href={DATA.header.instagram} target="_blank" rel="noreferrer" className="hover:text-blue-400 hover:scale-125 transition-all"><Icon.Instagram /></a>
-          </div>
+      <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
+        
+        {/* Name & Greeting */}
+        <h1 className="text-5xl md:text-6xl font-black mb-4 tracking-tight leading-tight text-white">
+          <span className="block">Hi, I’m <span className="text-blue-400">{DATA.header.name}</span></span>
+        </h1>
+
+        {/* title */}
+        <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+          {DATA.header.title}
+        </p>
+
+        {/* Subtitle / Skills */}
+        <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+          {/*DATA.header.subtitle*/}
+        </p>
+
+        {/* Buttons */}
+        <div className="flex flex-wrap gap-4 justify-center animate-fade-in-up delay-200">
+          <a
+            href={DATA.cv?.pdfUrl || '#'}
+            target="_blank"
+            rel="noreferrer"
+            className="group relative px-8 py-4 bg-white text-black rounded-full font-bold hover:scale-105 transition-all duration-300 flex items-center gap-2 overflow-hidden"
+          >
+            <span className="relative z-10 flex items-center gap-2"><Icon.Download/> Download CV</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
+          </a>
+          <a
+            href="#projects"
+            className="px-8 py-4 bg-white/5 border border-white/10 hover:bg-white/10 rounded-full font-bold backdrop-blur-sm transition-all hover:scale-105 flex items-center gap-2"
+          >
+            <Icon.Eye/> Explore Work
+          </a>
         </div>
-      </header>
+
+        {/* Socials */}
+        <div className="mt-12 flex gap-8 justify-center opacity-60 hover:opacity-100 transition-opacity">
+          <a href={DATA.header.github} target="_blank" rel="noreferrer" className="hover:text-blue-400 hover:scale-125 transition-all"><Icon.Github/></a>
+          <a href={DATA.header.linkedin} target="_blank" rel="noreferrer" className="hover:text-blue-400 hover:scale-125 transition-all"><Icon.Linkedin/></a>
+          <a href={DATA.header.instagram} target="_blank" rel="noreferrer" className="hover:text-blue-400 hover:scale-125 transition-all"><Icon.Instagram/></a>
+        </div>
+
+      </div>
+    </header>
 
       <main className="max-w-7xl mx-auto px-4 pb-20 space-y-32">
         
@@ -298,7 +384,7 @@ export default function Portfolio() {
               <div className="order-2 md:order-1">
                 <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">Who Am I?</h2>
                 <p className="text-lg text-gray-300 leading-relaxed mb-8 border-l-4 border-blue-500 pl-6">
-                  {DATA.summary}
+                {DATA.summary.map((para, i) => (<p key={i} className="mb-4">{para}</p>))}
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="p-4 bg-white/5 rounded-xl border border-white/5 hover:border-blue-500/50 transition-colors">
