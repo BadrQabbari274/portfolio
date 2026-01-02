@@ -172,21 +172,45 @@ function ModalGallery({ images, onClose }) {
 }
 
 export default function Portfolio() {
+  // ==========================================
+  // 1. المتغيرات والـ Hooks (تتحط في الأول)
+  // ==========================================
   const [gallery, setGallery] = useState({ open: false, images: [] });
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  
+  // (جديد) ضيف السطر ده هنا مع باقي الـ useState
+  const [isVisible, setIsVisible] = useState(true); 
 
+  // ==========================================
+  // 2. الـ useEffect (تعديل دالة السكرول)
+  // ==========================================
   useEffect(() => {
+    let lastScrollY = window.scrollY; // متغير مساعد
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+
+      // (جديد) اللوجيك بتاع اختفاء الـ Navbar
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false); // نازل لتحت -> اخفي
+      } else {
+        setIsVisible(true);  // طالع لفوق -> اظهر
+      }
+      lastScrollY = currentScrollY;
+
+      // الكود القديم بتاعك
+      setScrolled(currentScrollY > 50);
+      
       const sections = ['home', 'about', 'skills', 'projects', 'journey', 'certificates', 'art', 'contact'];
       for (const sec of sections) {
         const el = document.getElementById(sec);
-        if (el && window.scrollY >= (el.offsetTop - 100)) {
+        if (el && currentScrollY >= (el.offsetTop - 100)) {
           setActiveSection(sec);
         }
       }
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -200,7 +224,7 @@ export default function Portfolio() {
       <span className={`absolute bottom-0 left-0 h-0.5 bg-blue-500 transition-all duration-300 ${activeSection === to.replace('#','') ? 'w-full' : 'w-0 group-hover:w-full'}`}/>
     </a>
   );
-
+  
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-blue-500/30 selection:text-blue-200">
       
@@ -211,7 +235,12 @@ export default function Portfolio() {
       </div>
 
       {/* Navigation */}
-<nav className={`fixed top-0 w-full z-40 transition-all duration-500 ${scrolled ? 'bg-[#0a0a0a]/80 backdrop-blur-lg border-b border-white/5 py-3' : 'py-6'}`}>
+      <nav 
+        className={`fixed top-0 w-full z-40 transition-all duration-500 transform
+        ${scrolled ? 'bg-[#0a0a0a]/80 backdrop-blur-lg border-b border-white/5 py-3' : 'py-6'}
+        ${isVisible ? 'translate-y-0' : '-translate-y-full'} 
+        `}
+      >
   <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
     
     {/* Logo */}
