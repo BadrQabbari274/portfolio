@@ -440,6 +440,38 @@ export default function Portfolio() {
           </div>
         </section>
 
+        
+        {/* Projects Section */}
+        <section id="projects" className="scroll-mt-24">
+          <div className="text-center mb-16">
+             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-pink-400 bg-clip-text text-transparent inline-block">Featured Projects</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {DATA.projects.map((p) => (
+              <div key={p.id} className="group relative bg-[#111] rounded-2xl overflow-hidden border border-white/5 hover:border-blue-500/50 transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 opacity-80"/>
+                <div className="h-48 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center p-8 group-hover:scale-105 transition-transform duration-700">
+                   {/* Fallback pattern if no image */}
+                   <div className="w-16 h-16 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 text-3xl">💻</div>
+                </div>
+                <div className="relative p-8">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">{p.title}</h3>
+                    <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-xs rounded-full border border-blue-500/20">{p.duration}</span>
+                  </div>
+                  <p className="text-gray-400 mb-6 leading-relaxed line-clamp-3">{p.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {p.tech.map((t, i) => <span key={i} className="px-3 py-1 bg-white/5 text-gray-300 text-xs rounded-md border border-white/5 group-hover:border-blue-500/30 transition-colors">{t}</span>)}
+                  </div>
+                  <button onClick={() => openGallery(p.images)} className="w-full py-3 bg-white/5 hover:bg-blue-600 text-white rounded-lg font-semibold transition-all flex items-center justify-center gap-2 border border-white/10 hover:border-transparent">
+                    <Icon.Eye/> View Gallery
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* My Journey (Education & Experience Timeline) */}
         <section id="journey" className="scroll-mt-24">
           <div className="text-center mb-16">
@@ -489,36 +521,6 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* Projects Section */}
-        <section id="projects" className="scroll-mt-24">
-          <div className="text-center mb-16">
-             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-pink-400 bg-clip-text text-transparent inline-block">Featured Projects</h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {DATA.projects.map((p) => (
-              <div key={p.id} className="group relative bg-[#111] rounded-2xl overflow-hidden border border-white/5 hover:border-blue-500/50 transition-all duration-500">
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 opacity-80"/>
-                <div className="h-48 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center p-8 group-hover:scale-105 transition-transform duration-700">
-                   {/* Fallback pattern if no image */}
-                   <div className="w-16 h-16 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 text-3xl">💻</div>
-                </div>
-                <div className="relative p-8">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">{p.title}</h3>
-                    <span className="px-3 py-1 bg-blue-900/30 text-blue-300 text-xs rounded-full border border-blue-500/20">{p.duration}</span>
-                  </div>
-                  <p className="text-gray-400 mb-6 leading-relaxed line-clamp-3">{p.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {p.tech.map((t, i) => <span key={i} className="px-3 py-1 bg-white/5 text-gray-300 text-xs rounded-md border border-white/5 group-hover:border-blue-500/30 transition-colors">{t}</span>)}
-                  </div>
-                  <button onClick={() => openGallery(p.images)} className="w-full py-3 bg-white/5 hover:bg-blue-600 text-white rounded-lg font-semibold transition-all flex items-center justify-center gap-2 border border-white/10 hover:border-transparent">
-                    <Icon.Eye/> View Gallery
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
 
         {/* Certificates Section */}
         <section id="certificates" className="scroll-mt-24">
